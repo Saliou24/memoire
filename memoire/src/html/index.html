@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/jeudememoire.css">
+    <link rel="favicon icon" href="../image/memoirelogo.png">
+    <title>Jeu de mémoire</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>JEU DE MEMOIRE : Jungle</h1>
+        </header>
+
+        <main class="game">
+
+            <aside class="option">
+                <input type="button" value="Nouvelle Partie">
+            </aside>
+
+            <div class="cards">
+
+            </div>
+            <aside class="infogame">
+                <div class='timer'>
+                    <div>
+                        Temps:
+                        <div id="chrono"> 00:00:00</div>
+                    </div>
+                    <div>
+                        <span>Paire trouvé :</span>
+                        <span id="paireTrouve">0</span>
+                    </div>
+
+                    <div>
+                        <div>Meilleur score : <span id="best">0</span> </div>
+                    </div>
+                </div>
+            </aside>
+            <div id="popup1">
+                <div class="popup">
+                    <h2>Felicitations 🎉</h2>
+                    <a class="close" href=#> </a>
+                    <div class="content-1">
+                        Félicitations Vous êtes un gagnant 🎉🎉
+                    </div>
+                    <div class="content-2">
+                        <p>Vous avez fais les 8<span id=finalMove> </span> mouvements </p>
+                        <p>en <span id=totalTime> </span> </p>
+                        <p>Votre Score: <span id=starRating></span></p>
+                    </div>
+                    <input type="button" value="Fermer">
+
+                </div>
+            </div>
+
+        </main>
+
+        <footer>
+
+            <div>
+                &copy;2023 Saliou Thiongane & Evan Cholette Tous droits réservés &copy;
+            </div>
+        </footer>
+    </div>
+    <script src="../js/jeudememoire.js"></script>
+    <script>
+        JeuDeMemoire.init(document.getElementById('wrapper'))
+    </script>
+</body>
+
+</html>

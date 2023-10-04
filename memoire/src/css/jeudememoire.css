@@ -1,0 +1,170 @@
+@keyframes turnDiv {
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    background-color: aquamarine;
+    background-image: url(../image/backgroundgame.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    font-size: 100%;
+    padding: 20px;
+    color: white;
+    background-color: black;
+    margin: 0 0 10px 0;
+}
+
+
+.timer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.timer>div {
+    width: 100%;
+    margin: 25px 0 25px 0;
+    font-size: 30px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+}
+
+
+.game {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.game>aside {
+    width: 25%;
+}
+
+.option {
+    display: inline-block;
+    height: calc(100vh - 87px - 18px);
+}
+
+.option>input:first-child {
+    font-size: 20px;
+    margin: 30px 0 0 0;
+    text-align: center;
+    border: none;
+    border-radius: 0.3em;
+    padding: 1em 1.5em;
+    cursor: pointer;
+    box-shadow: 0 0.6em 2em rgba(86, 66, 0, 0.2);
+}
+
+div[class*="card-"] {
+    position: relative;
+    margin: 5px;
+    width: 125px;
+    height: 125px;
+    background-position-y: center;
+    border-radius: 10%;
+
+}
+
+.cards {
+    display: none;
+    grid-template:
+        " a a a a "auto "b b b b"auto "c c c c"auto "d d d d"auto;
+    justify-content: center;
+    align-self: center;
+}
+
+div[class*="card-"] img {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 125px;
+    height: 125px;
+    border-radius: 10%;
+}
+
+#popup1 {
+    position: absolute;
+    top: calc(50vh - 87px - 18px - 102px);
+    left: calc(50vw - 171px);
+    display: none;
+}
+
+.popup {
+    padding: 20px;
+    background: aquamarine;
+    border-radius: 5px;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.popup h2 {
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup p {
+    margin: 10px;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup .close:hover {
+    color: #E5F720;
+}
+
+.popup .content-1,
+.content-2 {
+    max-height: 30%;
+    overflow: auto;
+    text-align: center;
+}
+
+.show {
+    visibility: visible !important;
+    opacity: 100 !important;
+}
+
+.popup input {
+    background-color: #141214;
+    padding: 0.7rem 1rem;
+    font-size: 0.7rem;
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    font-family: 'Gloria Hallelujah', cursive;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+div[class*="card-"] {
+    animation: turnDiv 1.5s;
+
+}

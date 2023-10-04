@@ -1,0 +1,66 @@
+Travail pratique - Mémoire
+
+Nous voulons concevoir un jeu de mémoire.
+Le jeu consiste à trouver  8 paires d'images en un temps record.
+
+La maquette ci-dessous est proposée à titre indicatif seulement.
+
+[ maquette-1 ]
+
+Les images cachées par un X sont celles dont il faut trouver les paires. Elles sont placées aléatoirement dans la grille.
+
+Une partie débute lorsque l'utilisateur clique sur le bouton "Nouvelle Partie" et se prolonge tant et aussi longtemps que toutes les images n'auront pas été trouvées ou que l'utilisateur n'aura pas cliqué sur le bouton "arrêter la partie"
+L'utilisateur peut jouer plusieurs parties jusqu'à ce qu'il décide de quitter.
+
+À chaque nouvelle partie:
+    On réinitialise la position des images aléatoirement.
+    Toutes les images cachées sont affichées un laps de temps puis recouvertes;
+    Le nombre de paires trouvées est remis à zéro ainsi que le temps écoulé.
+    Le bouton affichant "Arrêter la partie" affiche maintenant le message initial "Nouvelle partie"
+
+À la fin de chaque partie:
+    Un message de félicitations est affiché donnant le temps écoulé (dans une fenêtre);
+    Le meilleur temps est vérifié.
+    De ce fait dans une fenêtre, un message est affiché si le meilleur temps est battu.
+
+Durant la partie:
+    L'utilisateur clique sur deux images;
+    Les images s'affichent un laps de temps;
+    Si les images sont différentes, elles sont cachées de nouveau, sinon elles restent affichées et on incrémente le nombre de paires trouvées.
+    Durant ce temps, le nombre de secondes écoulées depuis le début de la partie courante s'accumule;
+    Le bouton affichant initialement "Nouvelle partie" doit afficher "Arrêter la partie"
+    La fin d'une partie est atteinte lorsque toutes les paires sont découvertes.
+
+[ maquette-2 ]
+
+Consigne technique
+    Utiliser seulement le JavaScript natif, aucune librairie
+    Utiliser cette référence pour la création de l'animation: https://davidwalsh.name/css-flip
+    Si vous créer un nouveau repository GIT, ne pas oublier:
+        .gitignore
+        .eslintrc.js
+        .editorconfig
+        package.json
+    Exécuter la commande npm install a la racine
+    À la racine du projet, ajouter un fichier readme.md avec le nom et prénom des membres de l'équipe.
+    Ajouter les droits en lecture pour votre professeur: martin.vachon@isi-mtl.com
+
+Barème de correction sur 100
+
+Fonctionnement
+    Images inactives au début                               4/4
+    Nouvelle partie : temps est affiché                     4/4
+    Le bouton « Nouvelle partie » change pour « Arrêter »   3/3
+    Clic sur image : affiche image                          5/5
+    2e image pareille : les deux images restent affichées   9/9
+    2e image différente : les deux images disparaissent     9/9
+    Pareilles : nombre de paires trouvées augmentent        6/6
+    Toutes les paires trouvées : message                    0/5
+    Meilleur temps battu : message et changement du temps   10/10
+    TOTAL :                                                 /55
+
+Présentation
+    Travail d'équipe (note individuelle)    /15
+    Code propre                             0/20
+    Présentation graphique                  5/10
+    TOTAL :                                 /45
